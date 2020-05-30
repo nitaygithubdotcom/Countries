@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  scrapy:
+    container_name: scrapy
+    build: .
+    volumes: 
+        - ./:/app/
+    command: ["scrapy", "crawl", "country"]
+    # command: ["sleep", "1000"]
+
+
+
