@@ -3,9 +3,11 @@ version: "3.8"
 services:
   scrapy:
     container_name: scrapy
-    build: .
+    # build: .
+    image: scrapy:latest
     volumes: 
         - ./:/app/
+    working_dir: /app/countries
     command: ["scrapy", "crawl", "country"]
     # command: ["sleep", "1000"]
 
